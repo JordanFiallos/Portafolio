@@ -1,0 +1,134 @@
+:root {
+    --color-light: white;
+    --color-golen: yellow;
+    background: url(imgIndex/cool-background.png) center/cover;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+/*IMAGENES*/
+.IconVer {
+    width: 69px;
+    border-radius: .90rem;
+    transform: rotate(90deg);
+    background: white;
+    margin-top: -56px;
+}
+
+
+.lead-xl {
+    font-size: 1.75rem;
+}
+
+.boder-fila {
+    border-right: 1px solid wheat;
+}
+
+.nav-link {
+    margin-left: 5rem;
+}
+
+.sideways {
+    writing-mode: vertical-lr;
+    margin: 5.5rem 0;
+    display: block;
+    transform: rotate(-180deg);
+}
+
+/*Boton Star Now*/
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--color-golen);
+    border-radius: 0;
+    padding: .7rem 2.5rem;
+    font-size: 1.25rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+}
+
+/*Boton Inici*/
+.btnI {
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--color-golen);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btnI:hover {
+    background-color: var(--color-golen);
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+}
+
+/*d-flex info*/
+.info {
+    text-align: center;
+}
+
+/*Imagen principal*/
+.img1 {
+    Width: 500px;
+    padding: 2rem;
+}
+
+.img3 {
+    margin-left: 100px;
+}
+
+/*Imagen apartado projectes elaborats*/
+.IMG2 {
+    width: 100%;
+}
+
+/*.TextProjectesElaborats {
+    color: rgb(17, 17, 230);
+    text-shadow: 2px 1px 1px rgb(64, 255, 0);
+}*/
+
+/*CARTAS*/
+.CARD1 {
+    color: red;
+    text-shadow: 2px 1px 3px;
+}
+
+
+/*IMAGÉN PRINCIPAL DEL PORTAFOLIO*/
+.IMA {
+    text-align: center;
+}
+
+
+@media (max-widht: 991.98px) {
+    .content {
+        padding: 5rem;
+    }
+}
+
+
+@media (max-widht: 200px) {
+    .img1 {
+        padding: -10px;
+        width: 1px;
+    }
+
+}
+
+@media (max-widht: 991.98px) {
+    .CARD1 {
+        text-align: center;
+        padding-right: 100px;
+    }
+}
