@@ -12,13 +12,22 @@ body {
     letter-spacing: .05rem;
 }
 
-/*IMAGENES*/
+/*------------------------------------MENU PRICIPAL-------------------------------------------*/
+/*Imagenes del menu pricipal*/
 .IconVer {
     width: 69px;
     border-radius: .90rem;
     transform: rotate(90deg);
     background: white;
     margin-top: -56px;
+}
+
+/*Posición de las imagenes del menu principal*/
+.sideways {
+    writing-mode: vertical-lr;
+    margin: 5.5rem 0;
+    display: block;
+    transform: rotate(-180deg);
 }
 
 
@@ -34,12 +43,6 @@ body {
     margin-left: 5rem;
 }
 
-.sideways {
-    writing-mode: vertical-lr;
-    margin: 5.5rem 0;
-    display: block;
-    transform: rotate(-180deg);
-}
 
 /*Boton Star Now*/
 .btn-primary {
@@ -78,11 +81,18 @@ body {
     text-align: center;
 }
 
-/*Imagen principal*/
+/*Imagen principal del menu*/
 .img1 {
     Width: 500px;
     padding: 2rem;
 }
+
+/*IMAGÉN PRINCIPAL DEL PORTAFOLIO*/
+.IMA {
+    text-align: center;
+}
+
+/*------------------------------------MENU PRICIPAL-------------------------------------------*/
 
 .img3 {
     margin-left: 100px;
@@ -105,30 +115,228 @@ body {
 }
 
 
-/*IMAGÉN PRINCIPAL DEL PORTAFOLIO*/
-.IMA {
-    text-align: center;
-}
-
-
-@media (max-widht: 991.98px) {
-    .content {
-        padding: 5rem;
-    }
-}
-
-
-@media (max-widht: 200px) {
-    .img1 {
-        padding: -10px;
-        width: 1px;
-    }
-
-}
-
 @media (max-widht: 991.98px) {
     .CARD1 {
         text-align: center;
         padding-right: 100px;
     }
+
+    .content {
+        padding: 5rem;
+    }
+
 }
+
+/*--------------------------Imagen responsive para telefonos--------------------------*/
+@media (max-width: 576px) {
+
+    /* Estilos para pantallas aún más pequeñas */
+    .img1 {
+        width: 25rem;
+    }
+
+    .info {
+        margin-top: 3rem;
+    }
+
+    .IMA {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 992.00px) {
+
+    /* Estilos para pantallas aún más pequeñas */
+    .img1 {
+        width: 20rem;
+    }
+
+    .IconVer {
+        width: 3rem;
+    }
+
+    .sideways {
+        margin-top: 15px;
+        margin-bottom: 4.4rem;
+    }
+
+}
+
+@media (min-width: 1190.40px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 38.5rem;
+    }
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .img1 {
+        width: 24rem;
+    }
+}
+/*--------------------------Imagen responsive para telefonos--------------------------*/
+
+
+/*--------------------------Imagen responsive para Dispositivos más grandes--------------------------*/
+
+@media (min-width: 1352.73px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 43.9rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 3.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .img1 {
+        width: 28rem;
+    }
+}
+
+@media (min-width: 1488px) {
+    .ResponsiGrandeImgfilas {
+        height: 48.4rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 4.1rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .img1 {
+        width: 30.5rem;
+    }
+}
+
+@media (min-width: 1653.33px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 53.9rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 4.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .img1 {
+        width: 34.2rem;
+    }
+}
+
+@media (min-width: 1860px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 60.7rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 5rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .img1 {
+        width: 38.5rem;
+    }
+
+}
+
+@media (min-width: 1984.00px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 64.8rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    .img1 {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 2232px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 73rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 5.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .img1 {
+        width: 46rem;
+    }
+}
+
+@media (min-width: 2976px) {
+
+    .ResponsiGrandeImgfilas {
+        height: 97rem;
+    }
+
+    /*Imagenes del menu pricipal*/
+    .IconVer {
+        width: 8rem;
+        margin-bottom: 4.2rem;
+    }
+
+    .img1 {
+        width: 60rem;
+    }
+}
+
+
+@media (min-width: 4464.00px) {
+
+    /*Imagenes del menu pricipal*/
+
+    .ResponsiGrandeImgfilas {
+        height: 147rem;
+    }
+
+    .IconVer {
+        width: 12rem;
+        margin-bottom: 8rem;
+    }
+
+    .img1 {
+        width: 90rem;
+    }
+}
+
+@media (min-width: 5952px) {
+
+    /*Imagenes del menu pricipal*/
+
+    .ResponsiGrandeImgfilas {
+        height: 196rem;
+    }
+
+    .IconVer {
+        width: 16rem;
+        margin-bottom: 10rem;
+    }
+
+    .img1 {
+        width: 120rem;
+    }
+}
+
+/*--------------------------Imagen responsive para Dispositivos más grandes--------------------------*/
