@@ -143,6 +143,29 @@ body {
         text-align: center;
     }
 
+    .img2{
+        width: 10rem;
+        margin-left: 10rem;
+    }
+
+    .img3{
+        width: 10rem;
+        margin-left:4.3rem;
+    }
+
+    .ResponsiTextPresentacion{
+        margin-right: 1rem;
+    }
+
+    .ResponsiTextPresentacion1, .ResponsiTextPresentacion2, .ResponsiTextPresentacion3{
+        width: 18rem;
+        text-align: center;
+    }
+
+    .ResponsiTextPresentacion3{
+        margin-left: 6rem;
+    }
+
 }
 
 @media (min-width: 992.00px) {
