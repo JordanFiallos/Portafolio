@@ -92,6 +92,26 @@ body {
     text-align: center;
 }
 
+.circle-image-container {
+    width: 350px; /* Ajusta el tamaño según sea necesario */
+    height: 350px; /* Ajusta el tamaño según sea necesario */
+    overflow: hidden;
+}
+
+.circle-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .circle-image-container {
+        width: 100%; /* Ajusta el tamaño para dispositivos móviles */
+        height: auto; /* Ajusta el tamaño para dispositivos móviles */
+        margin-top: 20px;
+    }
+}
+
 /*------------------------------------MENU PRICIPAL-------------------------------------------*/
 
 .img3 {
@@ -128,6 +148,8 @@ body {
 }
 
 /*--------------------------Imagen responsive para telefonos--------------------------*/
+
+
 @media (max-width: 576px) {
 
     /* Estilos para pantallas aún más pequeñas */
@@ -143,26 +165,28 @@ body {
         text-align: center;
     }
 
-    .img2{
+    .img2 {
         width: 10rem;
         margin-left: 10rem;
     }
 
-    .img3{
+    .img3 {
         width: 10rem;
-        margin-left:4.3rem;
+        margin-left: 4.3rem;
     }
 
-    .ResponsiTextPresentacion{
+    .ResponsiTextPresentacion {
         margin-right: 1rem;
     }
 
-    .ResponsiTextPresentacion1, .ResponsiTextPresentacion2, .ResponsiTextPresentacion3{
+    .ResponsiTextPresentacion1,
+    .ResponsiTextPresentacion2,
+    .ResponsiTextPresentacion3 {
         width: 18rem;
         text-align: center;
     }
 
-    .ResponsiTextPresentacion3{
+    .ResponsiTextPresentacion3 {
         margin-left: 6rem;
     }
 
@@ -191,6 +215,7 @@ body {
     .ResponsiGrandeImgfilas {
         height: 38.5rem;
     }
+
     /*Imagenes del menu pricipal*/
     .IconVer {
         width: 3rem;
@@ -201,6 +226,7 @@ body {
         width: 24rem;
     }
 }
+
 /*--------------------------Imagen responsive para telefonos--------------------------*/
 
 
