@@ -12,6 +12,7 @@ body {
     letter-spacing: .05rem;
 }
 
+
 /*------------------------------------MENU PRICIPAL-------------------------------------------*/
 /*Imagenes del menu pricipal*/
 .IconVer {
@@ -21,6 +22,20 @@ body {
     background: white;
     margin-top: -56px;
 }
+
+
+/*Imagenes debajo de la foto 1_1.png*/
+.Git_Lin {
+    width: 80px;
+    border-radius: 50%; /* Hace que el elemento sea redondeado */
+    background-color: rgba(255, 255, 255, 0.456); /* Establece el color de fondo */
+    opacity: 0.5; /* Reduce la opacidad del elemento al 50% */
+}
+
+.bg-red {
+    background-color: #ffffffb6; 
+}
+
 
 /*Posición de las imagenes del menu principal*/
 .sideways {
