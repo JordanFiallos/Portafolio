@@ -1,43 +1,87 @@
 :root {
     --color-light: white;
-    --color-golen: yellow;
-    background: url(imgIndex/cool-background.png) center/cover;
+    --color-golden: yellow;
+    --color-dark: #333;
+    --background-img: url('imgIndex/cool-background.png');
 }
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 100;
+    font-size: 100%;
     background-color: var(--color-dark);
     color: var(--color-light);
     letter-spacing: .05rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-img) center/cover;
+    z-index: -1;
+    animation: moveBg 10s infinite alternate;
+}
+
+@keyframes moveBg {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.1) translate(10px, -10px);
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
 
 /*------------------------------------MENU PRICIPAL-------------------------------------------*/
-/*Imagenes del menu pricipal*/
+/*Imagenes del menu principal*/
+
 .IconVer {
-    width: 69px;
+    width: 10vw;
+    max-width: 69px;
     border-radius: .90rem;
     transform: rotate(90deg);
     background: white;
     margin-top: -56px;
+    transition: transform 0.3s, width 0.3s, margin 0.3s;
 }
 
+.IconVer:hover {
+    transform: rotate(0deg);
+}
 
 /*Imagenes debajo de la foto 1_1.png*/
 .Git_Lin {
-    width: 80px;
-    border-radius: 50%; /* Hace que el elemento sea redondeado */
-    background-color: rgba(255, 255, 255, 0.456); /* Establece el color de fondo */
-    opacity: 0.5; /* Reduce la opacidad del elemento al 50% */
+    width: 10vw;
+    max-width: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.456);
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
 }
+
+.Git_Lin:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 
 .bg-red {
-    background-color: #ffffffb6; 
+    background-color: #ffffffb6;
 }
 
 
-/*Posición de las imagenes del menu principal*/
+/*Posición de las imágenes del menú principal*/
+/* Estilos adicionales */
 .sideways {
     writing-mode: vertical-lr;
     margin: 5.5rem 0;
@@ -45,9 +89,8 @@ body {
     transform: rotate(-180deg);
 }
 
-
 .lead-xl {
-    font-size: 1.75rem;
+    font-size: 1.75rem
 }
 
 .boder-fila {
@@ -59,14 +102,15 @@ body {
 }
 
 
-/*Boton Star Now*/
+/*Botón Start Now*/
 .btn-primary {
     background-color: transparent;
     border: 1px solid;
-    color: var(--color-golen);
+    color: var(--color-golden);
     border-radius: 0;
     padding: .7rem 2.5rem;
     font-size: 1.25rem;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .btn-primary:hover {
@@ -75,18 +119,19 @@ body {
     border: 1px solid var(--color-light);
 }
 
-/*Boton Inici*/
+/*Botón Inici*/
 .btnI {
     background-color: transparent;
     border: 1px solid;
-    color: var(--color-golen);
+    color: var(--color-golden);
     font-size: 30px;
     text-align: center;
     margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .btnI:hover {
-    background-color: var(--color-golen);
+    background-color: var(--color-golden);
     color: var(--color-light);
     border: 1px solid var(--color-light);
 }
@@ -96,59 +141,87 @@ body {
     text-align: center;
 }
 
-/*Imagen principal del menu*/
+/*Imagen principal del menú*/
 .img1 {
-    Width: 500px;
+    width: 500px;
     padding: 2rem;
 }
 
-/*IMAGÉN PRINCIPAL DEL PORTAFOLIO*/
+/*IMAGEN PRINCIPAL DEL PORTAFOLIO*/
 .IMA {
     text-align: center;
 }
 
 .circle-image-container {
-    width: 350px; /* Ajusta el tamaño según sea necesario */
-    height: 350px; /* Ajusta el tamaño según sea necesario */
+    width: 350px;
+    height: 350px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .circle-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.circle-image-container img:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 992px) {
     .circle-image-container {
-        width: 100%; /* Ajusta el tamaño para dispositivos móviles */
-        height: auto; /* Ajusta el tamaño para dispositivos móviles */
+        width: 100%;
+        height: auto;
         margin-top: 20px;
     }
 }
 
 /*------------------------------------MENU PRICIPAL-------------------------------------------*/
 
-
-
-/*Imagen apartado projectes elaborats*/
+/* Estilos para imágenes y contenedores */
 .IMG2 {
     width: 100%;
 }
 
-/*.TextProjectesElaborats {
-    color: rgb(17, 17, 230);
-    text-shadow: 2px 1px 1px rgb(64, 255, 0);
-}*/
-
-/*CARTAS*/
 .CARD1 {
     color: red;
     text-shadow: 2px 1px 3px;
+    transition: text-shadow 0.3s;
 }
 
+.CARD1:hover {
+    text-shadow: 3px 2px 5px;
+}
 
-@media (max-widht: 991.98px) {
+.IconVer {
+    width: 3rem;
+    border-radius: .90rem;
+    transform: rotate(90deg);
+    background: white;
+    margin-top: -56px;
+    transition: transform 0.3s, width 0.3s, margin-bottom 0.3s;
+}
+
+.IconVer:hover {
+    transform: rotate(0deg);
+}
+
+.img1 {
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem;
+    transition: width 0.3s;
+}
+
+.img1:hover {
+    width: 110%;
+}
+
+/* Responsividad */
+@media (max-width: 991.98px) {
     .CARD1 {
         text-align: center;
         padding-right: 100px;
@@ -157,15 +230,9 @@ body {
     .content {
         padding: 5rem;
     }
-
 }
 
-/*--------------------------Imagen responsive para telefonos--------------------------*/
-
-
 @media (max-width: 576px) {
-
-    /* Estilos para pantallas aún más pequeñas */
     .img1 {
         width: 25rem;
     }
@@ -174,18 +241,11 @@ body {
         margin-top: 3rem;
     }
 
-    .IMA {
-        text-align: center;
-    }
-
-    .img2 {
-        width: 10rem;
-        margin-left: 10rem;
-    }
-
+    .img2,
     .img3 {
         width: 10rem;
-        margin-left: 4.3rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .ResponsiTextPresentacion {
@@ -197,17 +257,13 @@ body {
     .ResponsiTextPresentacion3 {
         width: 18rem;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .ResponsiTextPresentacion3 {
-        margin-left: 6rem;
-    }
-
 }
 
-@media (min-width: 992.00px) {
-
-    /* Estilos para pantallas aún más pequeñas */
+/* Optimización y ajuste para pantallas más grandes */
+@media (min-width: 992px) {
     .img1 {
         width: 20rem;
     }
@@ -217,48 +273,46 @@ body {
     }
 
     .sideways {
-        margin-top: 15px;
-        margin-bottom: 4.4rem;
+        margin-top: 5px;
+        margin-bottom: 4.6rem;
     }
-
 }
 
-@media (min-width: 1190.40px) {
-
+@media (min-width: 1190px) {
     .ResponsiGrandeImgfilas {
         height: 38.5rem;
-    }
-
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 3rem;
-        margin-bottom: 1.5rem;
     }
 
     .img1 {
         width: 24rem;
     }
+
+    .IconVer {
+        width: 3.5rem;
+    }
+
+    .sideways {
+        margin-top: 10px;
+        margin-bottom: 5.7rem;
+    }
 }
 
-/*--------------------------Imagen responsive para telefonos--------------------------*/
-
-
-/*--------------------------Imagen responsive para Dispositivos más grandes--------------------------*/
-
-@media (min-width: 1352.73px) {
-
+@media (min-width: 1352px) {
     .ResponsiGrandeImgfilas {
         height: 43.9rem;
     }
 
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 3.5rem;
-        margin-bottom: 1.8rem;
-    }
-
     .img1 {
         width: 28rem;
+    }
+
+    .IconVer {
+        width: 4rem;
+    }
+
+    .sideways {
+        margin-top: 10px;
+        margin-bottom: 6rem;
     }
 }
 
@@ -267,96 +321,99 @@ body {
         height: 48.4rem;
     }
 
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 4.1rem;
-        margin-bottom: 1.8rem;
-    }
-
     .img1 {
         width: 30.5rem;
     }
+
+    .IconVer {
+        width: 5rem;
+    }
+
+    .sideways {
+        margin-top: 10px;
+        margin-bottom: 6.4rem;
+    }
 }
 
-@media (min-width: 1653.33px) {
-
+@media (min-width: 1653px) {
     .ResponsiGrandeImgfilas {
         height: 53.9rem;
     }
 
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 4.2rem;
-        margin-bottom: 2.5rem;
+    .img1 {
+        width: 40.2rem;
     }
 
-    .img1 {
-        width: 34.2rem;
+    .IconVer {
+        width: 6rem;
+    }
+
+    .sideways {
+        margin-top: 25px;
+        margin-bottom: 7rem;
     }
 }
 
 @media (min-width: 1860px) {
-
     .ResponsiGrandeImgfilas {
         height: 60.7rem;
-    }
-
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 5rem;
-        margin-bottom: 2.8rem;
     }
 
     .img1 {
         width: 38.5rem;
     }
 
+    .IconVer {
+        width: 8rem;
+    }
+
+    .sideways {
+        margin-top: 30px;
+        margin-bottom: 8rem;
+    }
 }
 
-@media (min-width: 1984.00px) {
-
+@media (min-width: 1984px) {
     .ResponsiGrandeImgfilas {
         height: 64.8rem;
     }
 
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 5rem;
-        margin-bottom: 3rem;
+    .img1 {
+        width: 400rem;
     }
 
-    .img1 {
-        width: 40rem;
+    .IconVer {
+        width: 9rem;
+    }
+
+    .sideways {
+        margin-top: 40px;
+        margin-bottom: 8.6rem;
     }
 }
 
 @media (min-width: 2232px) {
-
     .ResponsiGrandeImgfilas {
         height: 73rem;
-    }
-
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 5.5rem;
-        margin-bottom: 3.5rem;
     }
 
     .img1 {
         width: 46rem;
     }
+
+    .IconVer {
+        width: 10rem;
+    }
+
+    .sideways {
+        margin-top: 50px;
+        margin-bottom: 9.7rem;
+    }
 }
 
 @media (min-width: 2976px) {
-
     .ResponsiGrandeImgfilas {
         height: 97rem;
-    }
-
-    /*Imagenes del menu pricipal*/
-    .IconVer {
-        width: 8rem;
-        margin-bottom: 4.2rem;
     }
 
     .img1 {
@@ -364,18 +421,9 @@ body {
     }
 }
 
-
-@media (min-width: 4464.00px) {
-
-    /*Imagenes del menu pricipal*/
-
+@media (min-width: 4464px) {
     .ResponsiGrandeImgfilas {
         height: 147rem;
-    }
-
-    .IconVer {
-        width: 12rem;
-        margin-bottom: 8rem;
     }
 
     .img1 {
@@ -384,21 +432,20 @@ body {
 }
 
 @media (min-width: 5952px) {
-
-    /*Imagenes del menu pricipal*/
-
     .ResponsiGrandeImgfilas {
         height: 196rem;
-    }
-
-    .IconVer {
-        width: 16rem;
-        margin-bottom: 10rem;
     }
 
     .img1 {
         width: 120rem;
     }
-}
 
-/*--------------------------Imagen responsive para Dispositivos más grandes--------------------------*/
+    .IconVer {
+        width: 300rem;
+    }
+
+    .sideways {
+        margin-top: 200px;
+        margin-bottom: 20.6rem;
+    }
+}
